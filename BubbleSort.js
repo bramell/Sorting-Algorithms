@@ -27,12 +27,14 @@ export default class BubbleSort {
         this._array = value;
     }
 
+    /// Method to clear previous results from the GUI
     initializeGUI() {
         document.getElementById('bubble-original').textContent = '';
         document.getElementById('bubble-sorted').textContent = '';
         document.getElementById('bubble-passes').textContent = '';
     }
 
+    /// Event listener for Bubble Sort button
     bubbleSortEvent(arr) {
         const bubbleSortButton = document.querySelector('#bubble-sort .code-runner button');
         bubbleSortButton.addEventListener('click', () => {
@@ -49,8 +51,8 @@ export default class BubbleSort {
         });
     }
 
+    /// Bubble Sort Algorithm
     bubbleSort(arr) {
-        let pass = document.getElementById('bubble-passes');
         let n = arr.length;
 
         for (let i = 0; i < n - 1; i++) {
@@ -63,16 +65,22 @@ export default class BubbleSort {
                 }
             }
 
-            console.log(`Pass ${i + 1}: ${arr.join(' | ')}`);
-
-            const p = document.createElement('p');
-            const span = document.createElement('span');
-            span.textContent = `Pass ${i + 1}: ${arr.join(' | ')}`;
-            p.appendChild(span);
-
-            pass.appendChild(p);
+            // Create elements for each pass
+            this.createPassElement(arr, i);
         }
 
         return arr;
+    }
+
+    // Create a new paragraph element for each pass and append it to the pass container
+    createPassElement(arr, i) {
+        let pass = document.getElementById('bubble-passes');
+
+        const p = document.createElement('p');
+        const span = document.createElement('span');
+        span.textContent = `Pass ${i + 1}: ${arr.join(' | ')}`;
+        p.appendChild(span);
+
+        pass.appendChild(p);
     }
 }
