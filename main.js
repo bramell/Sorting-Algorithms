@@ -1,25 +1,16 @@
-import BubbleSort from "./BubbleSort.js";
+import randomArray from "./randomArray.js";
+import BubbleSort from "./Algorithms/BubbleSort.js";
 
 function main() {
-    let arr = randomArray(10, 100);
+    let arraySize = 10;
+    let maxValue = 100;
+
+    // Generate random array
+    let arr = randomArray(arraySize, maxValue);
 
     // Bubble Sort
-    const bubbleSort = new BubbleSort(10, 100);
+    const bubbleSort = new BubbleSort(arraySize, maxValue);
     bubbleSort.bubbleSortEvent(arr);
-}
-
-function randomArray(size, max) {
-    const arr = [];
-
-    for (let i = 0; i < size; i++) {
-        let int = Math.floor(Math.random() * max);
-        
-        if (int > 0) {
-            arr.push(int);
-        }
-    }
-
-    return arr;
 }
 
 main();

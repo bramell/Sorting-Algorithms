@@ -37,14 +37,22 @@ export default class BubbleSort {
     /// Event listener for Bubble Sort button
     bubbleSortEvent(arr) {
         const bubbleSortButton = document.querySelector('#bubble-sort .code-runner button');
+
         bubbleSortButton.addEventListener('click', () => {
+
             this.initializeGUI();
 
             const bubbleOriginal = document.getElementById('bubble-original');
             const bubbleSorted = document.getElementById('bubble-sorted');
+            const bubbleTime = document.getElementById('bubble-time');
 
+            // Start timing the sorting process
+            const startTime = performance.now();
 
             const sortedArray = this.bubbleSort([...arr]); //Shallow copy to avoid mutating original array
+
+            const endTime = performance.now();
+            bubbleTime.textContent = (endTime - startTime).toFixed(2);
 
             bubbleOriginal.textContent = arr.join(' | ');
             bubbleSorted.textContent = sortedArray.join(' | ');

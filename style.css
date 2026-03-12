@@ -26,6 +26,11 @@ button {
     cursor: pointer;
 }
 
+.time {
+    font-size: smaller;
+    font-style: italic;
+}
+
 .code-output{
     font-weight: bold;
     margin-top: 1em;
