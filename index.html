@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Sorting Algorithms</title>
+</head>
+<body>
+    <h1>Sorting Algorithms</h1>
+    <section id="bubble-sort">
+        <h2>Bubble Sort</h2>
+        <p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, 
+            compares adjacent elements and swaps them if they are in the wrong order. 
+            The process is repeated until the list is sorted. Time Complexity: O(n^2)</p>
+            <div class="code-runner">
+                <button>Run Bubble Sort</button>
+                <div class="code-output">
+                    <div class="array-row">
+                        <span>Original Array:</span>
+                        <span id="bubble-original"></span>
+                    </div>
+
+                    <div class="passes" id="bubble-passes"></div>
+
+                    <div class="array-row">
+                        <span>Sorted Array:</span>
+                        <span id="bubble-sorted"></span>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

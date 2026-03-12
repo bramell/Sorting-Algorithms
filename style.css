@@ -1,0 +1,52 @@
+body{
+    width: 40%;
+    margin: auto;
+    background-color: rgb(46, 46, 53);
+    color: white;
+}
+
+section {
+    margin-top: 2em;
+    padding: 1em;
+    border-bottom: solid 1px #ffffff;
+    border-top: solid 1px #ffffff;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #627bbe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.code-output{
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.array-row {
+    display: grid;
+    grid-template-columns: 140px auto;
+}
+
+.passes{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 6em;
+}
+
+.passes span{
+    display: inline-block;
+    background-color: #aaddc1;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    color: black;
+}
